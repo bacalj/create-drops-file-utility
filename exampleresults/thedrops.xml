@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<enterprise>
+ <properties lang="en">
+  <datasource>My Nice College</datasource>
+  <datetime>2017-06-16T11:05:33</datetime>
+ </properties>
+ <membership>
+  <sourcedid>
+   <source>My Nice College</source>
+   <id>1234.201701</id>
+  </sourcedid>
+  <member>
+   <sourcedid>
+    <source>My Nice College</source>
+    <id>99543210</id>
+   </sourcedid>
+   <idtype>1</idtype>
+   <role roletype="01">
+    <status>0</status>
+   </role>
+  </member>
+ </membership>
+ <membership>
+  <sourcedid>
+   <source>My Nice College</source>
+   <id>4321.201701</id>
+  </sourcedid>
+  <member>
+   <sourcedid>
+    <source>My Nice College</source>
+    <id>99123456</id>
+   </sourcedid>
+   <idtype>1</idtype>
+   <role roletype="01">
+    <status>0</status>
+   </role>
+  </member>
+ </membership>
+</enterprise>
