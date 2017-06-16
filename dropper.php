@@ -1,13 +1,16 @@
 <?php
 
 /*
-	Configuration: set the data source and resulting filename yourself for now.
-	TODO: web interface, dynamic time
+	Configuration (hardcode):
+		sourcedata: 	the csv should look like exampledata file included here
+		destination: 	the name of the xml file you want to generate
+		termkey: 			some string that must be included in the course id for this to process
+		thisdate:			hardcode something close to when this will be sent to your server
 */
 
 $sourcedata = "exampledata.csv";
-$destination = "results/thedrops.xml";
-$termkey = '201801';
+$destination = "exampleresults/thedrops.xml";
+$termkey = '201701';
 $thisdate = '2017-06-16T11:05:33';
 
 //get the data from a file
@@ -41,11 +44,6 @@ $writer = new XMLWriter();
 $writer->openURI($destination);
 $writer->setIndent(true);
 $writer->startDocument("1.0", "UTF-8");
-
-
-// $writer->startDTD('enterprise');
-// $writer->endDTD();
-
 
 $writer->startElement("enterprise");
 	$writer->startElement("properties");
@@ -83,6 +81,3 @@ $writer->startElement("enterprise");
 $writer->endElement();
 $writer->endDocument();
 $writer->flush();
-
-
-print_r($xmlprep);
