@@ -39,10 +39,20 @@ fclose($hasdata);
 $writer = new XMLWriter();
 $writer->openURI($destination);
 $writer->startDocument("1.0", "UTF-8");
+
 // $writer->startDTD('enterprise');
 // $writer->endDTD();
+// $writer->startElement('enterprise');
+// 	$writer->startElement('properties');
+//
+// 	$writer->endElement('properties');
+// $writer->endElement('enterprise');
+
 $writer->startElement("greeting");
-$writer->text('Hello World');
+	$writer->writeAttribute("feeling", "nice");
+	$writer->text('Hello World');
+$writer->endElement("greeting");
+
 $writer->endDocument();
 $writer->flush();
 
