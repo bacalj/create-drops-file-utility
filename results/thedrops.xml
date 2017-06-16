@@ -6,24 +6,34 @@
  </properties>
  <membership>
   <sourcedid>
-   <source>Smith Collegezzzzzz</source>
+   <source>Smith College</source>
    <id>1234.201801</id>
   </sourcedid>
   <member>
-   <sourcedid/>
+   <sourcedid>
+    <source>Smith College</source>
+    <id>99123456</id>
+   </sourcedid>
    <idtype>1</idtype>
-   <role/>
+   <role roletype="01">
+    <status>0</status>
+   </role>
   </member>
  </membership>
  <membership>
   <sourcedid>
-   <source>Smith Collegezzzzzz</source>
+   <source>Smith College</source>
    <id>8181.201801</id>
   </sourcedid>
   <member>
-   <sourcedid/>
+   <sourcedid>
+    <source>Smith College</source>
+    <id>99411111</id>
+   </sourcedid>
    <idtype>1</idtype>
-   <role/>
+   <role roletype="01">
+    <status>0</status>
+   </role>
   </member>
  </membership>
 </enterprise>

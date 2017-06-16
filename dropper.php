@@ -42,8 +42,10 @@ $writer->openURI($destination);
 $writer->setIndent(true);
 $writer->startDocument("1.0", "UTF-8");
 
+
 // $writer->startDTD('enterprise');
 // $writer->endDTD();
+
 
 $writer->startElement("enterprise");
 	$writer->startElement("properties");
@@ -57,25 +59,24 @@ $writer->startElement("enterprise");
 		$writer->startElement("membership");
 
 			$writer->startElement("sourcedid");
-				$writer->startElement("source");
-					$writer->text("Smith College");
-				$writer->endElement();
-
-				$writer->startElement("id");
-					$writer->text($membership['course']);
-				$writer->endElement();
+				$writer->writeElement("source", "Smith College");
+				$writer->writeElement("id", $membership['course']);
 			$writer->endElement();
 
 			$writer->startElement("member");
 				$writer->startElement("sourcedid");
+					$writer->writeElement("source", "Smith College");
+					$writer->writeElement("id", $membership['student']);
 				$writer->endElement();
 
 				$writer->writeElement("idtype", 1);
 
 				$writer->startElement("role");
+				$writer->writeAttribute("roletype", "01");
+					$writer->writeElement("status", "0");
 				$writer->endElement();
-
 			$writer->endElement(); //end member element
+
 		$writer->endElement(); //end membership element
 	}
 
