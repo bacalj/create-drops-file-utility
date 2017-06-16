@@ -2,12 +2,13 @@
 
 /*
 	Configuration: set the data source and resulting filename yourself for now.
-	TODO: web interface
+	TODO: web interface, dynamic time
 */
 
 $sourcedata = "exampledata.csv";
 $destination = "results/thedrops.xml";
 $termkey = '201801';
+$thisdate = '2017-06-16T11:05:33';
 
 //get the data from a file
 $hasdata = fopen($sourcedata, "r");
@@ -38,21 +39,47 @@ fclose($hasdata);
 //start on the xml out
 $writer = new XMLWriter();
 $writer->openURI($destination);
+$writer->setIndent(true);
 $writer->startDocument("1.0", "UTF-8");
 
 // $writer->startDTD('enterprise');
 // $writer->endDTD();
-// $writer->startElement('enterprise');
-// 	$writer->startElement('properties');
-//
-// 	$writer->endElement('properties');
-// $writer->endElement('enterprise');
 
-$writer->startElement("greeting");
-	$writer->writeAttribute("feeling", "nice");
-	$writer->text('Hello World');
-$writer->endElement("greeting");
+$writer->startElement("enterprise");
+	$writer->startElement("properties");
+	$writer->writeAttribute("lang", "en");
+		$writer->writeElement('datasource', 'Smith College');
+		$writer->writeElement('datetime', $thisdate);
+	$writer->endElement();
 
+	//loop over records to create memberships
+	foreach ($xmlprep as $membership) {
+		$writer->startElement("membership");
+
+			$writer->startElement("sourcedid");
+				$writer->startElement("source");
+					$writer->text("Smith College");
+				$writer->endElement();
+
+				$writer->startElement("id");
+					$writer->text($membership['course']);
+				$writer->endElement();
+			$writer->endElement();
+
+			$writer->startElement("member");
+				$writer->startElement("sourcedid");
+				$writer->endElement();
+
+				$writer->writeElement("idtype", 1);
+
+				$writer->startElement("role");
+				$writer->endElement();
+
+			$writer->endElement(); //end member element
+		$writer->endElement(); //end membership element
+	}
+
+$writer->endElement();
 $writer->endDocument();
 $writer->flush();
 

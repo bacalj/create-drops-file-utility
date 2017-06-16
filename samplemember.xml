@@ -1,0 +1,23 @@
+<membership>
+
+	<sourcedid>
+		<source>Smith College</source>
+		<id>1282.201810</id>
+	</sourcedid>
+
+	<member>
+
+		<sourcedid>
+			<source>Smith College</source>
+			<id>990458922</id>
+		</sourcedid>
+
+		<idtype>1</idtype>
+
+		<role roletype = "01">
+			<status>0</status>
+		</role>
+
+	</member>
+
+</membership>

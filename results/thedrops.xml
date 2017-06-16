@@ -1,2 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<greeting lang="en">Hello World</greeting>
+<enterprise>
+ <properties lang="en">
+  <datasource>Smith College</datasource>
+  <datetime>2017-06-16T11:05:33</datetime>
+ </properties>
+ <membership>
+  <sourcedid>
+   <source>Smith Collegezzzzzz</source>
+   <id>1234.201801</id>
+  </sourcedid>
+  <member>
+   <sourcedid/>
+   <idtype>1</idtype>
+   <role/>
+  </member>
+ </membership>
+ <membership>
+  <sourcedid>
+   <source>Smith Collegezzzzzz</source>
+   <id>8181.201801</id>
+  </sourcedid>
+  <member>
+   <sourcedid/>
+   <idtype>1</idtype>
+   <role/>
+  </member>
+ </membership>
+</enterprise>
