@@ -12,6 +12,7 @@ $sourcedata = "exampledata.csv";
 $destination = "exampleresults/thedrops.xml";
 $termkey = '201701';
 $thisdate = '2017-06-16T11:05:33';
+$thiscollege = 'My Nice College';
 
 //get the data from a file
 $hasdata = fopen($sourcedata, "r");
@@ -48,7 +49,7 @@ $writer->startDocument("1.0", "UTF-8");
 $writer->startElement("enterprise");
 	$writer->startElement("properties");
 	$writer->writeAttribute("lang", "en");
-		$writer->writeElement('datasource', 'Smith College');
+		$writer->writeElement('datasource', $thiscollege);
 		$writer->writeElement('datetime', $thisdate);
 	$writer->endElement();
 
@@ -57,13 +58,13 @@ $writer->startElement("enterprise");
 		$writer->startElement("membership");
 
 			$writer->startElement("sourcedid");
-				$writer->writeElement("source", "Smith College");
+				$writer->writeElement("source", $thiscollege);
 				$writer->writeElement("id", $membership['course']);
 			$writer->endElement();
 
 			$writer->startElement("member");
 				$writer->startElement("sourcedid");
-					$writer->writeElement("source", "Smith College");
+					$writer->writeElement("source", $thiscollege);
 					$writer->writeElement("id", $membership['student']);
 				$writer->endElement();
 
