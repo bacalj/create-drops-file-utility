@@ -32,7 +32,19 @@ foreach ($drops as $arr) {
 		array_push( $xmlprep, $record );
 	}
 }
-
+//we have the data in an array so we can put down the file
 fclose($hasdata);
+
+//start on the xml out
+$writer = new XMLWriter();
+$writer->openURI($destination);
+$writer->startDocument("1.0", "UTF-8");
+// $writer->startDTD('enterprise');
+// $writer->endDTD();
+$writer->startElement("greeting");
+$writer->text('Hello World');
+$writer->endDocument();
+$writer->flush();
+
 
 print_r($xmlprep);
