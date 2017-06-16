@@ -25,4 +25,9 @@ $thisdate = '2017-06-16T11:05:33';
 php dropper
 ```
 
-## zap the resulting file to your server as you wish
+## add the doctype to the second line of the newly created xml
+```xml
+<!DOCTYPE enterprise SYSTEM "ldisp-2.0.dtd">
+```
+
+## zap to server
