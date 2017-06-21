@@ -8,11 +8,11 @@
 		thisdate:			hardcode something close to when this will be sent to your server
 */
 
-$sourcedata = "exampledata.csv";
+$sourcedata = "drops_tue.csv";
 $destination = "exampleresults/thedrops.xml";
-$termkey = '201701';
-$thisdate = '2017-06-16T11:05:33';
-$thiscollege = 'My Nice College';
+$termkey = '201810';
+$thisdate = '2018-06-19T16:00:33';
+$thiscollege = 'Smith College';
 
 //get the data from a file
 $hasdata = fopen($sourcedata, "r");
