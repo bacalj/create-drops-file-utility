@@ -21,7 +21,7 @@ $thisdate = '2017-06-16T11:05:33';
 
 ## run it
 ```bash
-php dropper
+php dropper.php
 ```
 
 ## add the doctype to the second line of the newly created xml
