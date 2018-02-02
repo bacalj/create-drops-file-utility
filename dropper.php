@@ -8,10 +8,10 @@
 		thisdate:			hardcode something close to when this will be sent to your server
 */
 
-$sourcedata = "drop_three.csv";
-$destination = "exampleresults/dropthree.xml";
+$sourcedata = "sourcecsvs/scptest.csv";
+$destination = "resultingxmls/scptest.xml";
 $termkey = '201820';
-$thisdate = '2018-06-29T16:00:33';
+$thisdate = '2018-09-10T11:00:33';
 $thiscollege = 'Smith College';
 
 //get the data from a file

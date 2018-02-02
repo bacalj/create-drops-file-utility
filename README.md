@@ -1,6 +1,6 @@
 # Dropper
-- For unknown reasons our BannerLMB instance is not processing drops for some terms. _(probably some user input difference we can't find yet)_
-- So, for now I wrote this command line tool to take a `.csv` and output the `.xml` file needed to send to Banner to undo the LMB enrollments that should be dropped
+
+- Command line tool to take a `.csv` and output the `.xml` file needed to send to Banner to undo the LMB enrollments that are not dropped by the default process. 
 
 ## csv should look like this
 
@@ -25,7 +25,7 @@ php dropper.php
 ```
 
 ## add the doctype to the second line of the newly created xml
-- Definitely need to make this automated, but this had to get done
+(optional, it appears)
 ```xml
 <!DOCTYPE enterprise SYSTEM "ldisp-2.0.dtd">
 ```
