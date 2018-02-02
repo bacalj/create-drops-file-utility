@@ -1,6 +1,6 @@
 # Dropper
 
-- Command line tool to take a `.csv` and output the `.xml` file needed to send to Banner to undo the LMB enrollments that are not dropped by the default process. 
+- Command line tool to take a `.csv` and output the `.xml` file needed to send to Moodle to undo the LMB enrollments that are not dropped by the default process. 
 
 ## csv should look like this
 
